@@ -107,8 +107,10 @@ def mutation(gen, rate):
 gen = [Network(784, 10, [16,16]) for _ in range(100)]
 acc = 0
 i = 0
-while acc<70:
-    test_data = new_test_data(1000)
+
+
+while acc<0.90:
+    test_data = new_test_data(100)
     gen.sort(key=(lambda x: x.test(test_data)), reverse=True)
     gen = next_gen(gen[:len(gen)//2])
     gen = mutation(gen, 1/1000)

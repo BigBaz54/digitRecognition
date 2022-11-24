@@ -1,0 +1,1 @@
+Gen. 4688	pop = 100	mutation : 1/1000	test_data : 100   acc = 0.679
